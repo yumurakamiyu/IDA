@@ -7,12 +7,24 @@
 </head>
 <body>
     <script>
-        function primenuber(n){
-            let i=1;
+        function primenumber(n){
+            let i= 1;
             while(i++ < n){
                 document.write(i+","+n+"<br>");
+                if(n % i != 0){
+                    document.write("割り切れないbr/>");
+                } else {
+                    document.write("割り切れる<br/>");
+                    break;
+                }
             } 
-        } 
+            if(i == n){
+                document.write("素数!");
+            } else {
+                document.write("素数でない!");
+            }
+        }
+        primenumber(5); 
     </script>
 </body>
 </html>
